@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F969782A46A696F58441F0D /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CA283BC517D828F8C60C91 /* Pods_Weather.framework */; };
 		E32C056F2A5AA2F400F6B165 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32C056E2A5AA2F400F6B165 /* NetworkMonitor.swift */; };
-		E338CEC72ACD7DB4002CD166 /* Simulator screen 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E338CEC62ACD7DB4002CD166 /* Simulator screen 1.png */; };
-		E338CEC92ACD7DBD002CD166 /* Simulator screen 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E338CEC82ACD7DBD002CD166 /* Simulator screen 2.png */; };
+		E338CECC2ACD89A8002CD166 /* Simulator screen 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E338CECA2ACD89A7002CD166 /* Simulator screen 2.png */; };
+		E338CECD2ACD89A8002CD166 /* Simulator screen 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E338CECB2ACD89A8002CD166 /* Simulator screen 1.png */; };
 		E36100C42A5A133E001997A9 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36100C32A5A133E001997A9 /* StoryboardScenes.swift */; };
 		E36100C62A5A1347001997A9 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E36100C52A5A1347001997A9 /* swiftgen.yml */; };
 		E36100C82A5A13D8001997A9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36100C72A5A13D8001997A9 /* Assets.swift */; };
@@ -55,8 +55,8 @@
 		42B1A5A520C590A13FD7BF45 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		5B7116C884E7028677767075 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		E32C056E2A5AA2F400F6B165 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		E338CEC62ACD7DB4002CD166 /* Simulator screen 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator screen 1.png"; sourceTree = "<group>"; };
-		E338CEC82ACD7DBD002CD166 /* Simulator screen 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator screen 2.png"; sourceTree = "<group>"; };
+		E338CECA2ACD89A7002CD166 /* Simulator screen 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator screen 2.png"; sourceTree = "<group>"; };
+		E338CECB2ACD89A8002CD166 /* Simulator screen 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator screen 1.png"; sourceTree = "<group>"; };
 		E36100C32A5A133E001997A9 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		E36100C52A5A1347001997A9 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		E36100C72A5A13D8001997A9 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 		E338CEC52ACD7D87002CD166 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				E338CEC62ACD7DB4002CD166 /* Simulator screen 1.png */,
-				E338CEC82ACD7DBD002CD166 /* Simulator screen 2.png */,
+				E338CECB2ACD89A8002CD166 /* Simulator screen 1.png */,
+				E338CECA2ACD89A7002CD166 /* Simulator screen 2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -480,9 +480,9 @@
 				E3B5D62E2A588755006BFD05 /* LaunchScreen.storyboard in Resources */,
 				E3B5D6882A588F60006BFD05 /* Weather.storyboard in Resources */,
 				E3B5D62B2A588755006BFD05 /* Assets.xcassets in Resources */,
+				E338CECC2ACD89A8002CD166 /* Simulator screen 2.png in Resources */,
 				E3B5D67C2A588E97006BFD05 /* AppLoading.storyboard in Resources */,
-				E338CEC92ACD7DBD002CD166 /* Simulator screen 2.png in Resources */,
-				E338CEC72ACD7DB4002CD166 /* Simulator screen 1.png in Resources */,
+				E338CECD2ACD89A8002CD166 /* Simulator screen 1.png in Resources */,
 				E36100C62A5A1347001997A9 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
