@@ -36,7 +36,7 @@ class WeatherViewModel: WeatherViewModelProtocol {
     private var latitude: CLLocationDegrees?
     private var longitude: CLLocationDegrees?
     
-    private let days = 7
+    private let days = 3
     
     private var subscriptions: Set<AnyCancellable>
     

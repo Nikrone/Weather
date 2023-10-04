@@ -8,6 +8,6 @@
 import Foundation
 
 enum Enviroment {
-    static let apiKey = "4c11dec96f1b49c6b07152249232906"
+    static let apiKey = "1bfdcf4e6e084e949ab100535230410"
     static let weatherURLPath = "http://api.weatherapi.com/v1/forecast.json?key=\(apiKey)&q="
 }

@@ -180,7 +180,7 @@ extension WeatherController: UITableViewDataSource, UITableViewDelegate {
         guard let section = WeatherTableViewSection(sectionIndex: section) else { return 0 }
         switch section {
         case .daily:
-            return 7
+            return 3
         case .information:
             return 1
         case .description:
