@@ -108,7 +108,7 @@ private extension WeatherController {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.backgroundColor = AppColor.darkGray.withAlphaComponent(0.5)
+        collectionView.backgroundColor = AppColor.darkGray.withAlphaComponent(0.4)
         collectionView.layer.cornerRadius = 14
         collectionView.showsHorizontalScrollIndicator = false
         view.addSubview(collectionView)
@@ -178,13 +178,14 @@ extension WeatherController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = WeatherTableViewSection(sectionIndex: section) else { return 0 }
+        let descriptionsWeather = DescriptionWeather.allCases
         switch section {
         case .daily:
             return 3
         case .information:
             return 1
         case .description:
-            return descriptionArray.count
+            return descriptionsWeather.count
         }
     }
     
@@ -195,7 +196,7 @@ extension WeatherController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: WeatherCell.identifier, for: indexPath) as! WeatherCell
             let stateModel = viewModel.weatherCellStateModel(at: indexPath.row)
             cell.selectionStyle = .none
-            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.5)
+            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.4)
             cell.update(with: stateModel)
             return cell
             
@@ -203,7 +204,7 @@ extension WeatherController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: InformationCell.identifier, for: indexPath) as! InformationCell
             let stateModel = viewModel.informationCellStateModel(at: indexPath.row)
             cell.selectionStyle = .none
-            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.5)
+            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.4)
             cell.update(with: stateModel)
             return cell
             
@@ -211,7 +212,7 @@ extension WeatherController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionCell.identifier, for: indexPath) as! DescriptionCell
             let stateModel = viewModel.descriptionCellStateModel(at: indexPath.row)
             cell.selectionStyle = .none
-            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.5)
+            cell.backgroundColor = AppColor.darkGray.withAlphaComponent(0.4)
             cell.update(with: stateModel)
             return cell
         }

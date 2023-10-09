@@ -199,11 +199,11 @@ struct Location: Codable {
     }
 }
 
-let descriptionArray = [
-    "HUMIDITY",
-    "WIND",
-    "FEELS LIKE",
-    "PRESSURE",
-    "VISIBILITY",
-    "UV INDEX"
-]
+enum DescriptionWeather: String, CaseIterable {
+    case humidity = "HUMIDITY"
+    case wind = "WIND"
+    case feelsLike = "FEELS LIKE"
+    case pressure = "PRESSURE"
+    case visibility = "VISIBILITY"
+    case uvIndex = "UV INDEX"
+}

@@ -60,7 +60,7 @@ private extension WeatherCollectionCell {
         humidityLabel.font = .boldSystemFont(ofSize: 10)
         humidityLabel.textColor = AppColor.lightBlue
         humidityLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView).inset(26)
+            make.top.equalTo(imageView).inset(28)
             make.centerX.equalTo(imageView)
         }
         

@@ -179,34 +179,33 @@ class WeatherViewModel: WeatherViewModelProtocol {
         var descriptionValue: String?
         var iconImage: UIImage?
         
+        let descriptionWeather = DescriptionWeather.allCases[index]
         if let weatherModel = weather {
-            switch index {
-            case 0:
-                titleValue = descriptionArray[index]
+            switch descriptionWeather {
+            case .humidity:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(weatherModel.current.humidity)) + " %"
                 iconImage = Asset.humidity.image
-            case 1:
-                titleValue = descriptionArray[index]
+            case .wind:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(weatherModel.current.windKph * 1000 / 3600 )) + " m/s"
                 iconImage = Asset.wind.image
-            case 2:
-                titleValue = descriptionArray[index]
+            case .feelsLike:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(weatherModel.current.feelslikeC)) + "°"
                 iconImage = Asset.feelsLike.image
-            case 3:
-                titleValue = descriptionArray[index]
+            case .pressure:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(Double(weatherModel.current.pressureMB) / 133.332 * 100)) + " mm Hg"
                 iconImage = Asset.pressure.image
-            case 4:
-                titleValue = descriptionArray[index]
+            case .visibility:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(weatherModel.current.visKM)) + " km"
                 iconImage = Asset.visibility.image
-            case 5:
-                titleValue = descriptionArray[index]
+            case .uvIndex:
+                titleValue = descriptionWeather.rawValue
                 descriptionValue = String(Int(weatherModel.current.uv))
                 iconImage = Asset.uvIndex.image
-            default:
-                print("default value")
             }
         }
         
@@ -219,48 +218,30 @@ class WeatherViewModel: WeatherViewModelProtocol {
     
     func setBackgroundImage() -> UIImage {
         let weatherCondition = weather?.current.condition.text
-        if weatherCondition == "Sunny"
-            || weatherCondition == "Clear"  {
+        switch weatherCondition {
+        case "Sunny", "Clear":
             return Asset.sunnyBackground.image
-        } else if weatherCondition == "Partly cloudy" {
+        case "Partly cloudy":
             return Asset.cloudyBackground.image
-        } else if weatherCondition == "Overcast"
-                    || weatherCondition == "Cloudy"
-                    || weatherCondition == "Patchy rain possible" {
+        case "Overcast", "Cloudy", "Patchy rain possible":
             return Asset.moreCloudyBackground.image
-        } else if weatherCondition == "Rainy"
-                    || weatherCondition == "Light rain"
-                    || weatherCondition == "Light rain shower"
-                    || weatherCondition == "Moderate rain"
-                    || weatherCondition == "Light drizzle"
-                    || weatherCondition == "Patchy light drizzle"
-                    || weatherCondition == "Patchy light rain" {
+        case "Rainy", "Light rain", "Light rain shower", "Moderate rain", "Light drizzle", "Patchy light drizzle", "Patchy light rain":
             return Asset.rainyBackground.image
-        } else {
-            return Asset.cloudyBackground.image
+        default: return Asset.cloudyBackground.image
         }
     }
     
     private func setIconImage(weatherCondition: String) -> UIImage {
-        if weatherCondition == "Sunny"
-            || weatherCondition == "Clear"  {
+        switch weatherCondition {
+        case "Sunny", "Clear":
             return Asset.sun.image
-        } else if weatherCondition == "Partly cloudy" {
+        case "Partly cloudy":
             return Asset.sunCloud.image
-        } else if weatherCondition == "Overcast"
-                    || weatherCondition == "Cloudy"
-                    || weatherCondition == "Patchy rain possible" {
+        case "Overcast", "Cloudy", "Patchy rain possible":
             return Asset.cloud.image
-        } else if weatherCondition == "Rainy"
-                    || weatherCondition == "Light rain"
-                    || weatherCondition == "Light rain shower"
-                    || weatherCondition == "Moderate rain"
-                    || weatherCondition == "Light drizzle"
-                    || weatherCondition == "Patchy light drizzle"
-                    || weatherCondition == "Patchy light rain" {
+        case "Rainy", "Light rain", "Light rain shower", "Moderate rain", "Light drizzle", "Patchy light drizzle", "Patchy light rain":
             return Asset.rain.image
-        } else {
-            return Asset.sunCloud.image
+        default: return Asset.sunCloud.image
         }
     }
 }
